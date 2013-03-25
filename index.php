@@ -4,7 +4,7 @@
 
 <?php
 
-$filename = 'data/sites.csv';
+$filename = 'data/unknown.csv';
 //$filename = 'data/sitestest.csv';
 //$filename = 'data/sitestest301.csv';
 
@@ -28,7 +28,7 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
 
 			//Sets Sitename into URL and adding http://
 			$sitename = $data[$c];
-			$url = 'http://' . $sitename;
+			$url = $sitename; //$url = 'http://' . $sitename;
 
 			//Checking if it's a EPiServersite and tries to check what version of site.
 			$result = episerverCheck($url);
