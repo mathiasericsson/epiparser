@@ -4,7 +4,7 @@
 
 <?php
 
-$filename = 'data/unknown.csv';
+$filename = 'data/sites.csv';
 //$filename = 'data/sitestest.csv';
 //$filename = 'data/sitestest301.csv';
 

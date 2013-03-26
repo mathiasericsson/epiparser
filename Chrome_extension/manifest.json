@@ -1,0 +1,14 @@
+{
+
+"name": "Epichecker",
+"version": "1.0",
+"manifest_version": 2,
+"description": "Checks if the current web page is EPiServer, and what version of EPiServer",
+"browser_action": 
+{
+"default_icon": "icon.png",
+"default_popup":"popup.html"
+},
+"permissions": [ "tabs", "http://*/*"]
+
+}
