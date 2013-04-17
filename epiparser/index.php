@@ -32,7 +32,7 @@ if (($handle = fopen($filename, "r")) !== FALSE) {
 
 			//Checking if it's a EPiServersite and tries to check what version of site.
 			$result = episerverCheck($url);
-			
+					
 			//Writes information into CSV file
 			fputcsv($fp, $result);
 			

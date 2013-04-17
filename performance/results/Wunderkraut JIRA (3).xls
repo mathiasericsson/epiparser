@@ -1,0 +1,2059 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Wunderkraut JIRA</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#45555F" height="47">
+        <td colspan="49">
+            <img src="https://wunderkraut.atlassian.net/jira-logo-scaled.png" width="201" height="47" border="0" alt="Wunderkraut JIRA">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="49">
+            <a href="https://wunderkraut.atlassian.net/secure/IssueNavigator.jspa?reset=true&jqlQuery=key+in+%28AL-99%2C+AL-64%2C+AL-101%2C+AL-102%2C+AL-87%2C+AL-93%2C+AL-76%2C+AL-80%2C+AL-103%2C+AL-104%2C+AL-106%2C+AL-81%2C+AL-107%2C+AL-15%2C+AL-82%2C+AL-110%2C+AL-111%2C+AL-112%2C+AL-91%2C+AL-24%2C+AL-108%29">Wunderkraut JIRA</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="49">
+            Displaying <strong>21</strong> issues at <strong>16 Apr 2013 16:29</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                                <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-project">
+                            Project
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary">
+                            Summary
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype">
+                            Issue Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status">
+                            Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority">
+                            Priority
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution">
+                            Resolution
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee">
+                            Assignee
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter">
+                            Reporter
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created">
+                            Created
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed">
+                            Last Viewed
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated">
+                            Updated
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate">
+                            Resolved
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-versions">
+                            Affects Version/s
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions">
+                            Fix Version/s
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-components">
+                            Component/s
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate">
+                            Due Date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches">
+                            Watchers
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail">
+                            Images
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate">
+                            Original Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate">
+                            Remaining Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent">
+                            Time Spent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio">
+                            Work Ratio
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks">
+                            Sub-Tasks
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks">
+                            Linked Issues
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment">
+                            Environment
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description">
+                            Description
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security">
+                            Security Level
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress">
+                            Progress
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress">
+                            Σ Progress
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent">
+                            Σ Time Spent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate">
+                            Σ Remaining Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate">
+                            Σ Original Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels">
+                            Labels
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10541">
+                            [CHART] Date of First Response
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10840">
+                            Epic Link
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_11140">
+                            Developer Notes
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10001">
+                            Epic/Theme
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10040">
+                            Global Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10003">
+                            Story Points
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10004">
+                            Business Value
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000">
+                            Flagged
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10343">
+                            Sprint
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10342">
+                            How to Demo
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10341">
+                            User Story
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10340">
+                            Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10545">
+                            Testing Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10440">
+                            Test Session(s)
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10441">
+                            Raised During
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                                    <tr id="issuerow23166" rel="23166" data-issuekey="AL-112" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-112" href="https://wunderkraut.atlassian.net/browse/AL-112">AL-112</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Lägg till Magnus block för att visa de övningar man slutfört
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Improvement</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 16 Apr 2013 16:01 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 16:01 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description"></td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840"></td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9499
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      20
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23165" rel="23165" data-issuekey="AL-111" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-111" href="https://wunderkraut.atlassian.net/browse/AL-111">AL-111</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Lägg in Magnus meny för övningar
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Improvement</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 16 Apr 2013 16:01 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 16:01 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description"></td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840"></td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9498
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      19
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23164" rel="23164" data-issuekey="AL-110" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-110" href="https://wunderkraut.atlassian.net/browse/AL-110">AL-110</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Övning - Ändra samspel (anhörig)
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Improvement</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 16 Apr 2013 15:59 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 15:59 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Läs ett vanligt exempel på flöde<br/>
+Specificera sitt eget flöde. “Kommer hem”, “Sur vill inte prata”, “luktar sprit” etc. <br/>
+Nästa steg: Hur kan man göra annorlunda: Läs ett exempel<br/>
+Vad ska du själv göra annorlunda?<br/>
+ - Tidigare alternativ kan vara kvar så man kan redigera. <br/>
+Text<br/>
+Sedan visa det man skrivit in i en sammanfattning<br/>
+
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840"></td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9497
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      18
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23162" rel="23162" data-issuekey="AL-108" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-108" href="https://wunderkraut.atlassian.net/browse/AL-108">AL-108</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Radbrytningar i plain text
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Improvement</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 16 Apr 2013 15:54 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 15:54 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Fritextfällt - de har gjort radbrytningar, men då det är plain text blir det en kompakt massa. Köra detta genom en funktion. Hjalmar kan lägga in detta på hela siten.<br/>
+
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-8
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9495
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      23
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23161" rel="23161" data-issuekey="AL-107" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-107" href="https://wunderkraut.atlassian.net/browse/AL-107">AL-107</a>
+</td>
+                                                        <td class="nav summary"><p>
+                100 frågors övning - Hjälp med att generera graf
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Improvement</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 16 Apr 2013 15:53 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 15:53 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Räcker med kryssrutor, behövs inte sliders. Uppdelad i olika kategorier men dessa kategorier skall endast visas på resultatsidan, visas i en graf. <br/>
+100 frågor, med radiobuttons. Hjälp med att generera en graf för resultatet. <br/>
+
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840"></td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9494
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      15
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23160" rel="23160" data-issuekey="AL-106" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-106" href="https://wunderkraut.atlassian.net/browse/AL-106">AL-106</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Sugsurfning - Hjälp Magnus med nedräknare
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Blocker
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 16 Apr 2013 15:51 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 15:51 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Väntar på att Magnus ska skicka över sin version av denna övning.
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840"></td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9493
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      Steg 1: Uppskattning sug. (slider är ganska bra att ha)<br/>
+Steg 2: Nedräkning, på t.ex. 5 minuter. Under dessa 5 minuterna skall man göra övningen på sidan.Om jätteenkelt ska det inte gå att gå till nästa när nedräkningen pågår. (avbryt övning)<br/>
+Steg 3: Ny uppskattning av hur man känner sug<br/>
+Steg 4: ?<br/>
+
+  </td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      13
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23155" rel="23155" data-issuekey="AL-104" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-104" href="https://wunderkraut.atlassian.net/browse/AL-104">AL-104</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Attgöra-lista (Block?)
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 16 Apr 2013 15:25 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 15:48 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">       (q=att_gora)<br/>
+Visa alla items som har 0. <br/>
+Vore kul att visa grafiskt, när man gjorde saker.<br/>
+Kunna lägga till “att göra aktiviteter” lite överallt i applikationen<br/>
+Kunna checka av när man är “klar”. Avcheckade items som flyttas ned. <br/>
+Efter en övning kan man klicka på “lägg till på att göralistan”. <br/>
+Varje att göra, Checka av, rapportera in att du gjort den (viktigt att man kan se när information registrerades och lägga till en kommentar), delaktiviteter. <br/>
+Delaktiviteter är mindre viktigt än registrering av att man gjort en aktivitet. <br/>
+<br/>
+När man planerar en att göra aktivitet skall uppbrutna aktiviteter visas med (att göra).
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840"></td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9489
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      Login<br/>
+On start page there should be block containing a list of the todo you&#39;ve created. In this list you should be able  to check that the task is finished = moving todo to another list (maybe new tab?), Plan this todo = creating subtasks (does not need to look like subtasks), and a possibility to report that you&#39;ve done this (with comment, important that timestamp is stored for this information).  
+  </td>
+                                                        <td class="nav customfield_10341">      As a authenticated user<br/>
+I want to have a doto list with activities I have created in different exercises<br/>
+so that I know what to improve and can check / report on them 
+  </td>
+                                                        <td class="nav customfield_10340">      12
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23154" rel="23154" data-issuekey="AL-103" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-103" href="https://wunderkraut.atlassian.net/browse/AL-103">AL-103</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Lägga till flera rutor som default
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 16 Apr 2013 14:41 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 14:41 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description"></td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840"></td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9488
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      Login<br/>
+Goto the exercicse to create a todo list<br/>
+Check that there are 4 textinput field as default. <br/>
+
+  </td>
+                                                        <td class="nav customfield_10341">      As a authenticated user<br/>
+I want to see more then one field as default when doing the exercise to create a todo list<br/>
+so that I know I can add more then one options.
+  </td>
+                                                        <td class="nav customfield_10340">      11
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23096" rel="23096" data-issuekey="AL-102" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-102" href="https://wunderkraut.atlassian.net/browse/AL-102">AL-102</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Define image and video resolution
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 15 Apr 2013 10:46 </td>
+                                                        <td class="nav lastViewed"> 15 Apr 2013 14:11 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Implementation. 
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-8
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9434
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      6
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23095" rel="23095" data-issuekey="AL-101" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-101" href="https://wunderkraut.atlassian.net/browse/AL-101">AL-101</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Crossbrowser testning
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Blocker
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 15 Apr 2013 10:44 </td>
+                                                        <td class="nav lastViewed"> 15 Apr 2013 10:45 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Vilka webbläsare ska testas
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-8
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9433
+  </td>
+                                                        <td class="nav customfield_10003"></td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      5
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow23093" rel="23093" data-issuekey="AL-99" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-99" href="https://wunderkraut.atlassian.net/browse/AL-99">AL-99</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Dagsvyn - layout
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Hjalmar Sköldefors
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 15 Apr 2013 10:38 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 13:55 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Responsivt. Same feeling as desing, but simplified. 
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-1
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9431
+  </td>
+                                                        <td class="nav customfield_10003">    5
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      3
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow22915" rel="22915" data-issuekey="AL-93" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-93" href="https://wunderkraut.atlassian.net/browse/AL-93">AL-93</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Flagga olämpligt innehåll i forumet
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 11 Apr 2013 10:43 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Skicka ett mail vid olämpligt innehåll
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-3
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9329
+  </td>
+                                                        <td class="nav customfield_10003">    3
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341"></td>
+                                                        <td class="nav customfield_10340">      8
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow22841" rel="22841" data-issuekey="AL-91" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-91" href="https://wunderkraut.atlassian.net/browse/AL-91">AL-91</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Login form - responsive adoptation
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 09 Apr 2013 10:10 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Depending on how big the work is we should hide the loginform with a button on top bar on mobile screens. If this is to much we should minimize the content and sizes of the login form
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-8
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9261
+  </td>
+                                                        <td class="nav customfield_10003">    5
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341">      As a anonymous user<br/>
+I want to see important content without a lot of scrolling<br/>
+so that I fast get to the point of the site and want to login or register as a user.<br/>
+
+  </td>
+                                                        <td class="nav customfield_10340">      21
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow22700" rel="22700" data-issuekey="AL-87" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-87" href="https://wunderkraut.atlassian.net/browse/AL-87">AL-87</a>
+</td>
+                                                        <td class="nav summary"><p>
+                WYSIWYG
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Improvement</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 04 Apr 2013 16:19 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description"></td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-8
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      9176
+  </td>
+                                                        <td class="nav customfield_10003">    3
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      Bild och video i texten. Viktigt med float på bilder och liknande. <br/>
+Övrigt vanliga, H, B, Italic. (som stödjs av css)<br/>
+Viktigt är att editor faktiskt visar styles som de kommer se ut på sidan. <br/>
+
+  </td>
+                                                        <td class="nav customfield_10341">      As a editor<br/>
+I want to create pages with format without writing HTML<br/>
+So that any person could create content on the page.<br/>
+
+  </td>
+                                                        <td class="nav customfield_10340">      7
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow22257" rel="22257" data-issuekey="AL-82" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-82" href="https://wunderkraut.atlassian.net/browse/AL-82">AL-82</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Övningar - Enkla
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Blocker
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 21 Mar 2013 14:02 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Du kan göra ett uppdrag flera gånger och gå tillbaka och se resultaten av övningar i ett “arkiv”. Mer text och fler steg på alkoholhjälpen. <br/>
+När du kommer in första gången kommer nästa övning. Börja med 4 - 5 övningar, de viktigaste. <br/>
+<br/>
+Övningar<br/>
+Registeringsövning<br/>
+Motivation (enklare övningar)<br/>
+Mål - loggbok<br/>
+Göra en lista aktiviteter<br/>
+ - Todo-list<br/>
+<br/>
+Sätt dina mål<br/>
+Inmatning av data ska man uppmuntras mest till + forumet<br/>
+<br/>
+Risksituationer - ska inte tas med (lista) från e-change.  <br/>
+
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-4
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      8850
+  </td>
+                                                        <td class="nav customfield_10003">    20
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342"></td>
+                                                        <td class="nav customfield_10341">      As a authenticated user<br/>
+I want to do exercise and see previous results of exercises <br/>
+so that I can learn how to be better and see progress.
+  </td>
+                                                        <td class="nav customfield_10340">      17
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow22254" rel="22254" data-issuekey="AL-81" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-81" href="https://wunderkraut.atlassian.net/browse/AL-81">AL-81</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Övningar - &quot;En massa frågor&quot; 
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Blocker
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 21 Mar 2013 13:56 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      To be specified<br/>
+En övning ska kunna generera värden inom olika kategorier så att man kan presentera olika grafer som resultat te.x.<br/>
+Resultatet ska gå att komma åt senare och man ska kunna göra om övningen flera gånger (alla resultat ska gå att komma åt).
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-4
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      8848
+  </td>
+                                                        <td class="nav customfield_10003">    20
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      To be specified<br/>
+
+  </td>
+                                                        <td class="nav customfield_10341">      As a anonymous user<br/>
+I want to answer a series of questions to evaluate my need<br/>
+so that I understand my current status and can take action based on that<br/>
+
+  </td>
+                                                        <td class="nav customfield_10340">      14
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow22253" rel="22253" data-issuekey="AL-80" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-80" href="https://wunderkraut.atlassian.net/browse/AL-80">AL-80</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Övningar för att skapa to-do-lista
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Blocker
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 21 Mar 2013 13:47 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description"></td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-4
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      8847
+  </td>
+                                                        <td class="nav customfield_10003">    20
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      Lista på saker som man vill göra/uppnå. <br/>
+Bra eller dåligt med listans uppgifter. <br/>
+Bearbetar listan, letar upp en “vinnare” - delar upp den till underuppgifter.<br/>
+<br/>
+Flera steg - visar en lista som man jobbar på. <br/>
+Övning 1 - Skapa och jobba med lista<br/>
+Skapa lista, arbeta med listan, ändra, sortera.  (vad är bra, vad är dåligt). <br/>
+Visa alltid 4 rader.<br/>
+Övning 2 - Välja ut ett item och bryt ner<br/>
+Planera “slappna av”. Kurs. <br/>
+Arbeta med en av “Slappna av”. <br/>
+“Övning 3 - att göra lista”<br/>
+Visas och arbetas med. En lista på saker man har gjort, kan fylla i att man kramas 4 gånger per dag. Wunderkraut kollar på. <br/>
+
+  </td>
+                                                        <td class="nav customfield_10341">      As an authenticated user<br/>
+I want the possibility to do exercises that generates first a list of things I want to achive and then the possibility to break this down into tasks and work with these<br/>
+so get clear tasks that I can achieve to improve myself to become better in what I want.
+  </td>
+                                                        <td class="nav customfield_10340">      10
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow22242" rel="22242" data-issuekey="AL-76" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-76" href="https://wunderkraut.atlassian.net/browse/AL-76">AL-76</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Bakgrundsbild
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 21 Mar 2013 13:23 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description"></td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-8
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      8837
+  </td>
+                                                        <td class="nav customfield_10003">    5
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      visit the site as a anonymous user and check the background image<br/>
+Try scrolling and make sure the image is fixed.<br/>
+Try visiting the site with mobile sized window and verify that the image is not loaded at all.
+  </td>
+                                                        <td class="nav customfield_10341">      As a anonymous and authenticated user <br/>
+I want to see a background image on the site<br/>
+so that I feel I&#39;m in a room
+  </td>
+                                                        <td class="nav customfield_10340">      9
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow22170" rel="22170" data-issuekey="AL-64" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-64" href="https://wunderkraut.atlassian.net/browse/AL-64">AL-64</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Responsive theme according to approved design
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Mathias Ericsson
+    </td>
+                                                        <td class="nav created"> 20 Mar 2013 10:31 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">1</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description"></td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541"></td>
+                                                        <td class="nav customfield_10840">      AL-8
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      8771
+  </td>
+                                                        <td class="nav customfield_10003">    13
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      Compare the design sketches that we have with the current site. All elements should look the same (not pixel perfect) in the latest versions of Chrome, FF and IE. The site should also work and information should be available also in browsers such as IE 7, the look and feel does not have to be perfect though.
+  </td>
+                                                        <td class="nav customfield_10341">      As a visitor I want a responsive theme on Alkoholhjälpen so that I believe Alkoholhjälpen can help me with my problems and easily can navigate on the site and browse/use the site from any kind of screen.
+  </td>
+                                                        <td class="nav customfield_10340">      4
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow19783" rel="19783" data-issuekey="AL-24" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-24" href="https://wunderkraut.atlassian.net/browse/AL-24">AL-24</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Securing email handlig
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Major
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Tomas Persson
+    </td>
+                                                        <td class="nav reporter">            Tomas Persson
+    </td>
+                                                        <td class="nav created"> 31 Jan 2013 14:04 </td>
+                                                        <td class="nav lastViewed"> &nbsp; </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">2</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Can we create a system where its not possible see the e-mail adresses through a system that anonymizes the email info.<br/>
+Local email (D6 module) to anonymize email adresses.<br/>
+<br/>
+Important to describe to the user that the email can be sensitive info and that you should use a private adress.
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541">            <span title="08 Apr 2013 14:07"><time class="livestamp" datetime="2013-04-08T14:07+0200">08/Apr/13 2:07 PM</time></span>
+    </td>
+                                                        <td class="nav customfield_10840">      AL-1
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      7051
+  </td>
+                                                        <td class="nav customfield_10003">    5
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      Check if module &quot;Database email encryption&quot; solves this for the customer, only implement if it&#39;s fast to implement.<br/>
+
+  </td>
+                                                        <td class="nav customfield_10341">      As a registered user<br/>
+I want to be sure my e-mail adress is secure<br/>
+so that people hacking the site or server can&#39;t retrive my e-mail
+  </td>
+                                                        <td class="nav customfield_10340">      22
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                <tr id="issuerow19485" rel="19485" data-issuekey="AL-15" class="issuerow">
+                                                        <td class="nav project">    Alkoholhjälpen
+</td>
+                                                        <td class="nav issuekey">
+
+    <a class="issue-link" data-issue-key="AL-15" href="https://wunderkraut.atlassian.net/browse/AL-15">AL-15</a>
+</td>
+                                                        <td class="nav summary"><p>
+                Övningar - Block - Alkoholtest
+    </p>
+</td>
+                                                        <td class="nav issuetype"> Story</td>
+                                                        <td class="nav status">Open
+</td>
+                                                        <td class="nav priority">   Blocker
+</td>
+                                                        <td class="nav resolution">    <em>Unresolved</em>
+</td>
+                                                        <td class="nav assignee">            Mathias Ericsson
+    </td>
+                                                        <td class="nav reporter">            Tomas Persson
+    </td>
+                                                        <td class="nav created"> 28 Jan 2013 12:10 </td>
+                                                        <td class="nav lastViewed"> 16 Apr 2013 15:57 </td>
+                                                        <td class="nav updated"> 16 Apr 2013 16:03 </td>
+                                                        <td class="nav resolutiondate"> &nbsp; </td>
+                                                        <td class="nav versions">    &nbsp;
+</td>
+                                                        <td class="nav fixVersions">    &nbsp;
+</td>
+                                                        <td class="nav components">    &nbsp;
+</td>
+                                                        <td class="nav duedate">    &nbsp;
+</td>
+                                                        <td class="nav watches">2</td>
+                                                        <td class="nav thumbnail"></td>
+                                                        <td class="nav timeoriginalestimate"></td>
+                                                        <td class="nav timeestimate"></td>
+                                                        <td class="nav timespent"></td>
+                                                        <td class="nav workratio">&nbsp;
+</td>
+                                                        <td class="nav subtasks">                </td>
+                                                        <td class="nav issuelinks">                </td>
+                                                        <td class="nav environment"></td>
+                                                        <td class="nav description">      Magnus har en lösning på detta som han skall skicka över, denna ska vi migrera över till vår lösning.<br/>
+<br/>
+Alkoholprofilen - motsvarande. Hur mycket dricker du. Det verkar vettigt att du ska prova alkoholhjälpen. Går det att spara ner i kontot innan man är registrer. Finns en halvlösning - e-change fungerar det så. <br/>
+Jag vill vara med, fyll i ett antal frågor. Kontrollerar om du “får” vara med. Kontos som skapas ska sättas som författare till noden. För vissa fungerar inte nuvarande lösning, nodid finns inte där. <br/>
+Man skulle kunna få ett “val” tack för att du gjorde testet<br/>
+
+  </td>
+                                                        <td class="nav security"></td>
+                                                        <td class="nav progress">     
+</td>
+                                                        <td class="nav aggregateprogress">     
+</td>
+                                                        <td class="nav aggregatetimespent"></td>
+                                                        <td class="nav aggregatetimeestimate"></td>
+                                                        <td class="nav aggregatetimeoriginalestimate"></td>
+                                                        <td class="nav labels">    </td>
+                                                        <td class="nav customfield_10541">            <span title="28 Jan 2013 14:19"><time class="livestamp" datetime="2013-01-28T14:19+0100">28/Jan/13 2:19 PM</time></span>
+    </td>
+                                                        <td class="nav customfield_10840">      AL-4
+  </td>
+                                                        <td class="nav customfield_11140"></td>
+                                                        <td class="nav customfield_10001">    </td>
+                                                        <td class="nav customfield_10040">      6794
+  </td>
+                                                        <td class="nav customfield_10003">    20
+</td>
+                                                        <td class="nav customfield_10004"></td>
+                                                        <td class="nav customfield_10000">
+
+
+</td>
+                                                        <td class="nav customfield_10343"></td>
+                                                        <td class="nav customfield_10342">      As an anonymous user, click on &quot;Testa dina vanor&quot; on start page (leads to test).<br/>
+<br/>
+Do test with a serious of questions and submit your response.<br/>
+<br/>
+At &quot;report page&quot;, place a registration form with &quot;mail&quot; and &quot;name&quot; filled. <br/>
+ <br/>
+
+  </td>
+                                                        <td class="nav customfield_10341">      As a anonymous user<br/>
+I want to test if my alcohol behavior <br/>
+so that I can see if I have risky behavior or have friends with risk behavior, if so we should be able to participate to online treatment.
+  </td>
+                                                        <td class="nav customfield_10340">      16
+  </td>
+                                                        <td class="nav customfield_10545">    Not Started
+</td>
+                                                        <td class="nav customfield_10440"></td>
+                                                        <td class="nav customfield_10441"></td>
+                    </tr>
+                </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="49"><font size="1">
+        Generated at Tue Apr 16 16:29:05 CEST 2013 by Mathias Ericsson using JIRA 6.0-OD-09-5#6061-sha1:4a1725cc53351dd03c2b30f7767cbc45ad13ccc7.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
