@@ -1,8 +1,14 @@
-<head>
-
-</head>
+<head></head>
 
 <?php
+
+/**
+ * Check integration with Google 
+ * https://developers.google.com/speed/docs/insights/v1/getting_started?hl=en
+ * 
+ * 
+ * */
+
 
 $filename = 'data/sites_test.csv';
 
